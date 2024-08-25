@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #9a6666;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0px 10px black;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .category-info {
+            padding: 15px;
+        }
+        .category-info h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+        .category-info p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>E - Book Categories</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="Designer1.jpeg" alt="Thriller">
+                <div class="category-info">
+                    <h3>Thriller</h3>
+                    <p>"A pulse-pounding thrill ride of twists and turns that will leave you breathless."</p>
+                    <a href="thriller.html" class="btn">Browse Thriller</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="Designer3.jpeg" alt="Romance">
+                <div class="category-info">
+                    <h3>Romance</h3>
+                    <p>"A sweeping romance that will capture your heart and soul."</p>
+                    <a href="romance.html" class="btn">Browse Romance</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="Designer4.jpeg" alt="Fantasy">
+                <div class="category-info">
+                    <h3>Fantasy</h3>
+                    <p>"Uncover the secrets of a mystical world, hidden in plain sight."</p>
+                    <a href="fantasy.html" class="btn">Browse Fantasy</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="Designer5.jpeg" alt="Crime">
+                <div class="category-info">
+                    <h3>Crime</h3>
+                    <p>"In a world of corruption, one detective dares to challenge the system."</p>
+                    <a href="crime.html" class="btn">Browse Crime</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="Designer6.jpeg" alt="Adventure">
+                <div class="category-info">
+                    <h3>Adventure</h3>
+                    <p>"Lost worlds, ancient secrets, and untold wonders to uncover."</p>
+                    <a href="adventure.html" class="btn">Browse Adventure</a>
+                </div>
+            </div>
+            </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romance Books</title>
+    <style>
+    /* Popular Books Section */
+    .popular-books {
+        padding: 60px 0;
+        background: #c7bdbd;
+    }
+    
+    .popular-books .container h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .books-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .book-item {
+        width: 30%;
+        text-align: center;
+        margin-bottom: 40px;
+        transition: transform 0.3s ease;
+    }
+    
+    .book-item img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    
+    .book-item h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .book-item p {
+        font-size: 16px;
+        color: #454141;
+    }
+    
+    .book-item:hover {
+        transform: translateY(-10px);
+    }
+     </style>
+</head>
+<body>
+    <!-- Romance Books Section -->
+    <section class="popular-books">
+        <div class="container">
+            <h2>Romance Books</h2>
+            <div class="books-grid">
+                <!-- Book Item -->
+                <div class="book-item">
+                    <img src="book4.jpg" alt="Book 4">
+                    <h3>Beating Heart</h3>
+                    <p>Laura Pavlov</p>
+                </div>
+                <div class="book-item">
+                    <img src="book5.jpg" alt="Book 5">
+                    <h3>The Boyfriend Goal</h3>
+                    <p>Lauren Blakely</p>
+                </div>
+                <div class="book-item">
+                    <img src="book6.jpg" alt="Book 6">
+                    <h3>Delicate Escape</h3>
+                    <p>Catherine Cowles</p>
+                </div>
+                <div class="book-item">
+                    <img src="book19.jpg" alt="Book 4">
+                    <h3>Pride & Prejudice</h3>
+                    <p>Keira Knightley</p>
+                </div>
+                <div class="book-item">
+                    <img src="book20.jpg" alt="Book 5">
+                    <h3>Wuthering Heights</h3>
+                    <p>Emily Bronte</p>
+                </div>
+                <div class="book-item">
+                    <img src="book21.jpg" alt="Book 6">
+                    <h3>The Fault in our Stars</h3>
+                    <p>John Green</p>
+                </div>
+                <!-- Add more book items as needed -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ebookApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Sharing Platform</title>
+    <link rel="icon" href="bgebook.png">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>-->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+}
+
+main {
+    padding: 1.5em;
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    user-select:none;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    user-select:none;
+}
+
+input[type="text"], input[type="file"] {
+    width: 98%;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.8em 1.5em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select:none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.search-bar {
+    margin-bottom: 1em;
+}
+
+.search-bar input {
+    width:98%;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]::placeholder{
+    user-select: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5em 0;
+}
+
+.book-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.book-file a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.book-file a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body ng-controller="MainController">
+    <header>
+        <h1>eBook Sharing Platform</h1>
+    </header>
+    
+    <main>
+        <div class="upload">
+            <h2>Upload a New eBook</h2>
+            <form id="uploadBook" m>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" ng-model="newBook.title" placeholder="e.g., The Great Gatsby" required />
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" ng-model="newBook.author" placeholder="e.g., F. Scott Fitzgerald" required />
+                </div>
+                <div class="form-group">
+                    <label for="link">File:</label>
+                    <input type="text" id="link" file-model="newBook.file" placeholder="e.g., url type" required />
+                </div>
+                <button type="submit">Upload eBook</button>
+            </form>
+        </div>
+    </main>
+    <script>
+document.getElementById('uploadBook').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const link = document.getElementById('link').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/addUser', { // Note the full URL
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ title, author, link }),
+        });
+
+        if (response.status === 201) {
+            const data = await response.json();
+            console.log(data);
+            alert('eBook uploaded successfully!');
+            // Optionally, clear the form or redirect
+            // document.getElementById('uploadBook').reset(); // To clear the form
+        } else {
+            alert('Failed to upload eBook');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while uploading the eBook');
+    }
+});
+    </script>
+</body>
+</html>

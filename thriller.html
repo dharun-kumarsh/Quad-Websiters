@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thriller Books</title>
+    <style>
+        /* Popular Books Section */
+.popular-books {
+    padding: 60px 0;
+    background: #c7bdbd;
+}
+
+.popular-books .container h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.books-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.book-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.book-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.book-item p {
+    font-size: 16px;
+    color: #454141;
+}
+
+.book-item:hover {
+    transform: translateY(-10px);
+}
+    </style>
+</head>
+<body>
+    <!-- Thriller Books Section -->
+    <section class="popular-books">
+        <div class="container">
+            <h2>Thriller Books</h2>
+            <div class="books-grid">
+                <!-- Book Item -->
+                <div class="book-item">
+                    <img src="book1.jpg" alt="Book 1">
+                    <h3>The Widow's Husband's Secret Lie</h3>
+                    <p>Freida McFadden</p>
+                </div>
+                <div class="book-item">
+                    <img src="book2.jpg" alt="Book 16">
+                    <h3>The Lost Bookshop</h3>
+                    <p>Evie Woods</p>
+                </div>
+                <div class="book-item">
+                    <img src="book3.jpg" alt="Book 17">
+                    <h3>The Broken Housemaid</h3>
+                    <p>Freida McFadden</p>
+                </div>
+                <div class="book-item">
+                    <img src="book16.jpg" alt="Book 18">
+                    <h3>1984: The Graphic Novel</h3>
+                    <p>George Orwell</p>
+                </div>
+                <div class="book-item">
+                    <img src="book17.jpg" alt="Book 19">
+                    <h3>The Great Gatsby</h3>
+                    <p>F. Scott Fitzgerald</p>
+                </div>
+                <div class="book-item">
+                    <img src="book18.jpg" alt="Book 20">
+                    <h3>The Silent Patient </h3>
+                    <p>Alex Michaelides</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
